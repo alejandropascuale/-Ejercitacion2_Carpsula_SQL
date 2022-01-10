@@ -1,0 +1,78 @@
+{
+    "sourceFile": "dataBase.sql",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1641829706587,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1641829720710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,5 +2,14 @@\n   'id' INT PRIMARY KEY NOT NULL,\n   'nombre' VARCHAR NOT NULL,\n   'apellido' VARCHAR NOT NULL,\n   'fecha_nacimiento' DATE NOT NULL,\n-  'salario' INT NOT NULL )\n\\ No newline at end of file\n+  'salario' INT NOT NULL )\n+\n+CREATE TABLE CURSO (\n+  'codigo' INT PRIMARY KEY NOT NULL,\n+  'nombre' VARCHAR NOT NULL,\n+  'descripcion' VARCHAR,\n+  'cupo' INT,\n+  'turno' VARCHAR,\n+  'PROFESOR_ID' INT )\n+\n"
+                },
+                {
+                    "date": 1641829728505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,4 +12,5 @@\n   'cupo' INT,\n   'turno' VARCHAR,\n   'PROFESOR_ID' INT )\n \n+INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n"
+                },
+                {
+                    "date": 1641829738265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,6 @@\n   'turno' VARCHAR,\n   'PROFESOR_ID' INT )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n+INSERT INTO PROFESOR VALUES (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n+INSERT INTO PROFESOR VALUES (3, 'Martín', 'Correa', '1987-12-07', 63000)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641829744276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,5 +14,6 @@\n   'PROFESOR_ID' INT )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n INSERT INTO PROFESOR VALUES (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n-INSERT INTO PROFESOR VALUES (3, 'Martín', 'Correa', '1987-12-07', 63000)\n\\ No newline at end of file\n+INSERT INTO PROFESOR VALUES (3, 'Martín', 'Correa', '1987-12-07', 63000)\n+INSERT INTO PROFESOR VALUES (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641829751153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,6 @@\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n INSERT INTO PROFESOR VALUES (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n INSERT INTO PROFESOR VALUES (3, 'Martín', 'Correa', '1987-12-07', 63000)\n-INSERT INTO PROFESOR VALUES (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n\\ No newline at end of file\n+INSERT INTO PROFESOR VALUES (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n+INSERT INTO PROFESOR VALUES (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641829762944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,8 @@\n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n INSERT INTO PROFESOR VALUES (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n INSERT INTO PROFESOR VALUES (3, 'Martín', 'Correa', '1987-12-07', 63000)\n INSERT INTO PROFESOR VALUES (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n-INSERT INTO PROFESOR VALUES (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n\\ No newline at end of file\n+INSERT INTO PROFESOR VALUES (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n+INSERT INTO PROFESOR VALUES (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n+\n+INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641829768640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,6 @@\n INSERT INTO PROFESOR VALUES (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n INSERT INTO PROFESOR VALUES (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n INSERT INTO PROFESOR VALUES (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n \n-INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n\\ No newline at end of file\n+INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n+INSERT INTO CURSO VALUES (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641829774491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,5 +20,6 @@\n INSERT INTO PROFESOR VALUES (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n INSERT INTO PROFESOR VALUES (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n \n INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n-INSERT INTO CURSO VALUES (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n\\ No newline at end of file\n+INSERT INTO CURSO VALUES (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n+INSERT INTO CURSO VALUES (103, 'Programación Java', 'POO en Java', 35, 'Noche', 4)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641829784612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,5 +21,7 @@\n INSERT INTO PROFESOR VALUES (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n \n INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n INSERT INTO CURSO VALUES (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n-INSERT INTO CURSO VALUES (103, 'Programación Java', 'POO en Java', 35, 'Noche', 4)\n\\ No newline at end of file\n+INSERT INTO CURSO VALUES (103, 'Programación Java', 'POO en Java', 35, 'Noche', 4)\n+INSERT INTO CURSO VALUES (104, 'Programación Web', NULL, 35, 'Noche', 5)\n+INSERT INTO CURSO VALUES (105, 'Programación C#', 'NET, Visual Studio 2019', 30, 'Noche', 6)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641830009637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   'turno' VARCHAR,\n   'PROFESOR_ID' INT )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n-INSERT INTO PROFESOR VALUES (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n+INSERT INTO PROFESOR VALUES \n INSERT INTO PROFESOR VALUES (3, 'Martín', 'Correa', '1987-12-07', 63000)\n INSERT INTO PROFESOR VALUES (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n INSERT INTO PROFESOR VALUES (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n INSERT INTO PROFESOR VALUES (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n"
+                },
+                {
+                    "date": 1641830018254,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n   'turno' VARCHAR,\n   'PROFESOR_ID' INT )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n+, (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n INSERT INTO PROFESOR VALUES \n INSERT INTO PROFESOR VALUES (3, 'Martín', 'Correa', '1987-12-07', 63000)\n INSERT INTO PROFESOR VALUES (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n INSERT INTO PROFESOR VALUES (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n"
+                },
+                {
+                    "date": 1641830024539,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,9 @@\n   'PROFESOR_ID' INT )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n-INSERT INTO PROFESOR VALUES \n-INSERT INTO PROFESOR VALUES (3, 'Martín', 'Correa', '1987-12-07', 63000)\n+, (3, 'Martín', 'Correa', '1987-12-07', 63000)\n INSERT INTO PROFESOR VALUES (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n INSERT INTO PROFESOR VALUES (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n INSERT INTO PROFESOR VALUES (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n \n"
+                },
+                {
+                    "date": 1641830032313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n , (3, 'Martín', 'Correa', '1987-12-07', 63000)\n-INSERT INTO PROFESOR VALUES (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n-INSERT INTO PROFESOR VALUES (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n+, (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n+, (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n INSERT INTO PROFESOR VALUES (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n \n INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n INSERT INTO CURSO VALUES (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n"
+                },
+                {
+                    "date": 1641830038549,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n , (3, 'Martín', 'Correa', '1987-12-07', 63000)\n , (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n , (5, 'Raúl', 'Martínez', '1980-10-15', 85000)\n-INSERT INTO PROFESOR VALUES (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n+, (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n \n INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n-INSERT INTO CURSO VALUES (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n+, (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n INSERT INTO CURSO VALUES (103, 'Programación Java', 'POO en Java', 35, 'Noche', 4)\n INSERT INTO CURSO VALUES (104, 'Programación Web', NULL, 35, 'Noche', 5)\n INSERT INTO CURSO VALUES (105, 'Programación C#', 'NET, Visual Studio 2019', 30, 'Noche', 6)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641830047494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n , (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n \n INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n , (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n-INSERT INTO CURSO VALUES (103, 'Programación Java', 'POO en Java', 35, 'Noche', 4)\n-INSERT INTO CURSO VALUES (104, 'Programación Web', NULL, 35, 'Noche', 5)\n-INSERT INTO CURSO VALUES (105, 'Programación C#', 'NET, Visual Studio 2019', 30, 'Noche', 6)\n\\ No newline at end of file\n+, (103, 'Programación Java', 'POO en Java', 35, 'Noche', 4)\n+, (104, 'Programación Web', NULL, 35, 'Noche', 5)\n+, (105, 'Programación C#', 'NET, Visual Studio 2019', 30, 'Noche', 6)\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1641829706587,
+            "name": "Commit-0",
+            "content": "CREATE TABLE PROFESOR (\n  'id' INT PRIMARY KEY NOT NULL,\n  'nombre' VARCHAR NOT NULL,\n  'apellido' VARCHAR NOT NULL,\n  'fecha_nacimiento' DATE NOT NULL,\n  'salario' INT NOT NULL )"
+        }
+    ]
+}
