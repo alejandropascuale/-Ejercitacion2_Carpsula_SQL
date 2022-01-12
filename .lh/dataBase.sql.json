@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 15,
+            "activePatchIndex": 65,
             "patches": [
                 {
                     "date": 1641829706587,
@@ -68,6 +68,206 @@
                 {
                     "date": 1641830047494,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,7 +21,7 @@\n , (6, 'Mabel', 'Ríos', '1982-06-12', 83000)\n \n INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n , (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n-INSERT INTO CURSO VALUES (103, 'Programación Java', 'POO en Java', 35, 'Noche', 4)\n-INSERT INTO CURSO VALUES (104, 'Programación Web', NULL, 35, 'Noche', 5)\n-INSERT INTO CURSO VALUES (105, 'Programación C#', 'NET, Visual Studio 2019', 30, 'Noche', 6)\n\\ No newline at end of file\n+, (103, 'Programación Java', 'POO en Java', 35, 'Noche', 4)\n+, (104, 'Programación Web', NULL, 35, 'Noche', 5)\n+, (105, 'Programación C#', 'NET, Visual Studio 2019', 30, 'Noche', 6)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641918026874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,15 @@\n   'cupo' INT,\n   'turno' VARCHAR,\n   'PROFESOR_ID' INT )\n \n+CREATE TABLE ESTUDIANTE (\n+  'legajo' INT PRIMARY KEY NOT NULL,\n+  'nombre' VARCHAR NOT NULL,\n+  'apellido' VARCHAR NOT NULL,\n+  'fecha_nacimiento' date NOT NULL,\n+  'carrera' VARCHAR)\n+\n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n , (3, 'Martín', 'Correa', '1987-12-07', 63000)\n , (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n"
+                },
+                {
+                    "date": 1641918376789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,5 +30,16 @@\n INSERT INTO CURSO VALUES (101, 'Algoritmos', 'Algoritmos y estructuras de datos', 20, 'Mañana', 1)\n , (102, 'Matemática Discreta', NULL, 20, 'Tarde', 2)\n , (103, 'Programación Java', 'POO en Java', 35, 'Noche', 4)\n , (104, 'Programación Web', NULL, 35, 'Noche', 5)\n-, (105, 'Programación C#', 'NET, Visual Studio 2019', 30, 'Noche', 6)\n\\ No newline at end of file\n+, (105, 'Programación C#', 'NET, Visual Studio 2019', 30, 'Noche', 6)\n+\n+INSERT INTO ESTUDIANTE\n+values \n+(36485, 'Romina', 'Nieva', '1999-11-26', 'Mecánica'),\n+(39685, 'Brenda', 'Medrano', '2000-09-25', 'Sistemas'),\n+(41258, 'Ramiro', 'Ríos', '1994-12-06', 'Sistemas'),\n+(43651, 'Cristian', 'Gómez', '1995-03-19', 'Mecánica'),\n+(47521, 'María', 'Velazquez', '1998-01-02', 'Sistemas'),\n+(47961, 'Alexis', 'Reinoso', '1994-12-17', 'Sistemas'),\n+(48952, 'Gabriel', 'Morales', '1996-10-03', 'Sistemas'),\n+(51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988362653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,5 +41,6 @@\n (43651, 'Cristian', 'Gómez', '1995-03-19', 'Mecánica'),\n (47521, 'María', 'Velazquez', '1998-01-02', 'Sistemas'),\n (47961, 'Alexis', 'Reinoso', '1994-12-17', 'Sistemas'),\n (48952, 'Gabriel', 'Morales', '1996-10-03', 'Sistemas'),\n-(51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n\\ No newline at end of file\n+(51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n+\n"
+                },
+                {
+                    "date": 1641988369897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,4 +43,5 @@\n (47961, 'Alexis', 'Reinoso', '1994-12-17', 'Sistemas'),\n (48952, 'Gabriel', 'Morales', '1996-10-03', 'Sistemas'),\n (51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n \n+INSERT INTO INSCRIP\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988377205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,5 +43,6 @@\n (47961, 'Alexis', 'Reinoso', '1994-12-17', 'Sistemas'),\n (48952, 'Gabriel', 'Morales', '1996-10-03', 'Sistemas'),\n (51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n \n-INSERT INTO INSCRIP\n\\ No newline at end of file\n+INSERT INTO INSCRIPCION\n+VALUES \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988387891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,6 @@\n (48952, 'Gabriel', 'Morales', '1996-10-03', 'Sistemas'),\n (51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n \n INSERT INTO INSCRIPCION\n-VALUES \n\\ No newline at end of file\n+VALUES \n+(1, 101, )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988392952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,5 +45,5 @@\n (51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n \n INSERT INTO INSCRIPCION\n VALUES \n-(1, 101, )\n\\ No newline at end of file\n+(1, 101, 41258, )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988401293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,5 +45,5 @@\n (51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n \n INSERT INTO INSCRIPCION\n VALUES \n-(1, 101, 41258, )\n\\ No newline at end of file\n+(1, 101, 41258, 2012-05-02 18:)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988411789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,5 +45,5 @@\n (51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n \n INSERT INTO INSCRIPCION\n VALUES \n-(1, 101, 41258, 2012-05-02 18:)\n\\ No newline at end of file\n+(1, 101, 41258, 2012-05-02 18:45:00),\n"
+                },
+                {
+                    "date": 1641988423997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,4 +46,5 @@\n \n INSERT INTO INSCRIPCION\n VALUES \n (1, 101, 41258, 2012-05-02 18:45:00),\n+(2, 102, 41258, 20)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988430012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,5 +46,5 @@\n \n INSERT INTO INSCRIPCION\n VALUES \n (1, 101, 41258, 2012-05-02 18:45:00),\n-(2, 102, 41258, 20)\n\\ No newline at end of file\n+(2, 102, 41258, 2012-04-02 18:)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988444753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,5 +46,6 @@\n \n INSERT INTO INSCRIPCION\n VALUES \n (1, 101, 41258, 2012-05-02 18:45:00),\n-(2, 102, 41258, 2012-04-02 18:)\n\\ No newline at end of file\n+(2, 102, 41258, 2012-04-02 18:45:00),\n+(3, 102, 47961, 2012-01-02 20:)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988452131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,5 @@\n INSERT INTO INSCRIPCION\n VALUES \n (1, 101, 41258, 2012-05-02 18:45:00),\n (2, 102, 41258, 2012-04-02 18:45:00),\n-(3, 102, 47961, 2012-01-02 20:)\n\\ No newline at end of file\n+(3, 102, 47961, 2012-01-02 20:01:00)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988461548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,6 @@\n INSERT INTO INSCRIPCION\n VALUES \n (1, 101, 41258, 2012-05-02 18:45:00),\n (2, 102, 41258, 2012-04-02 18:45:00),\n-(3, 102, 47961, 2012-01-02 20:01:00)\n\\ No newline at end of file\n+(3, 102, 47961, 2012-01-02 20:01:00),\n+(4,)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988468654,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,5 +48,5 @@\n VALUES \n (1, 101, 41258, 2012-05-02 18:45:00),\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n-(4,)\n\\ No newline at end of file\n+(4, 103, )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988481314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,5 +48,5 @@\n VALUES \n (1, 101, 41258, 2012-05-02 18:45:00),\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n-(4, 103, )\n\\ No newline at end of file\n+(4, 103, 47961, 2012-04-28 18:45:00)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988492034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,5 +48,6 @@\n VALUES \n (1, 101, 41258, 2012-05-02 18:45:00),\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n-(4, 103, 47961, 2012-04-28 18:45:00)\n\\ No newline at end of file\n+(4, 103, 47961, 2012-04-28 18:45:00),\n+)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988499362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,5 +49,5 @@\n (1, 101, 41258, 2012-05-02 18:45:00),\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n-)\n\\ No newline at end of file\n+(5, 101)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988504672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,5 +49,5 @@\n (1, 101, 41258, 2012-05-02 18:45:00),\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n-(5, 101)\n\\ No newline at end of file\n+(5, 101, 39685)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988512082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,5 +49,5 @@\n (1, 101, 41258, 2012-05-02 18:45:00),\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n-(5, 101, 39685)\n\\ No newline at end of file\n+(5, 101, 39685, 2012-04-12 18:)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988519567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,5 +49,6 @@\n (1, 101, 41258, 2012-05-02 18:45:00),\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n-(5, 101, 39685, 2012-04-12 18:)\n\\ No newline at end of file\n+(5, 101, 39685, 2012-04-12 18:45:00),\n+(6, )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988526232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,5 +50,5 @@\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n-(6, )\n\\ No newline at end of file\n+(6, 103, 43651, )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988534313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,5 +50,5 @@\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n-(6, 103, 43651, )\n\\ No newline at end of file\n+(6, 103, 43651, 2012-04-28 )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988540445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,5 +50,6 @@\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n-(6, 103, 43651, 2012-04-28 )\n\\ No newline at end of file\n+(6, 103, 43651, 2012-04-28 18:45:00),\n+()\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988547524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,5 +51,5 @@\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n-()\n\\ No newline at end of file\n+(7, 103, 43651, )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988554758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,5 +51,5 @@\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n-(7, 103, 43651, )\n\\ No newline at end of file\n+(7, 103, 43651, 2012-04-28 18:45:00)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988562771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,5 +51,6 @@\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n-(7, 103, 43651, 2012-04-28 18:45:00)\n\\ No newline at end of file\n+(7, 103, 43651, 2012-04-28 18:45:00),\n+(8, 101, 47961, )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988569439,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,5 +52,5 @@\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n (7, 103, 43651, 2012-04-28 18:45:00),\n-(8, 101, 47961, )\n\\ No newline at end of file\n+(8, 101, 47961, 2012-04-28 18:45)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988574862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,5 +52,5 @@\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n (7, 103, 43651, 2012-04-28 18:45:00),\n-(8, 101, 47961, 2012-04-28 18:45)\n\\ No newline at end of file\n+(8, 101, 47961, 2012-04-28 18:45:00),\n"
+                },
+                {
+                    "date": 1641988582789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,4 +53,5 @@\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n (7, 103, 43651, 2012-04-28 18:45:00),\n (8, 101, 47961, 2012-04-28 18:45:00),\n+(11, 101, )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988589412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,5 +53,5 @@\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n (7, 103, 43651, 2012-04-28 18:45:00),\n (8, 101, 47961, 2012-04-28 18:45:00),\n-(11, 101, )\n\\ No newline at end of file\n+(11, 101, 43651, 202)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988596275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,5 +53,5 @@\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n (7, 103, 43651, 2012-04-28 18:45:00),\n (8, 101, 47961, 2012-04-28 18:45:00),\n-(11, 101, 43651, 202)\n\\ No newline at end of file\n+(11, 101, 43651, 2012-04-21 18)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988613934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n   'apellido' VARCHAR NOT NULL,\n   'fecha_nacimiento' date NOT NULL,\n   'carrera' VARCHAR)\n \n+\n+\n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n , (3, 'Martín', 'Correa', '1987-12-07', 63000)\n , (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n@@ -53,5 +55,5 @@\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n (7, 103, 43651, 2012-04-28 18:45:00),\n (8, 101, 47961, 2012-04-28 18:45:00),\n-(11, 101, 43651, 2012-04-21 18)\n\\ No newline at end of file\n+(11, 101, 43651, 2012-04-21 18:45:00)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988623465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,10 +19,12 @@\n   'apellido' VARCHAR NOT NULL,\n   'fecha_nacimiento' date NOT NULL,\n   'carrera' VARCHAR)\n \n+CREATE TABLE INSCRIPCION (\n+  \n+)\n \n-\n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n , (3, 'Martín', 'Correa', '1987-12-07', 63000)\n , (4, 'Lucía', 'Díaz', '1991-02-24', 45000)\n"
+                },
+                {
+                    "date": 1641988629955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   'fecha_nacimiento' date NOT NULL,\n   'carrera' VARCHAR)\n \n CREATE TABLE INSCRIPCION (\n-  \n+  'numero'\n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988635984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   'fecha_nacimiento' date NOT NULL,\n   'carrera' VARCHAR)\n \n CREATE TABLE INSCRIPCION (\n-  'numero'\n+  'numero' INT PRIMARY KE\n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988645095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   'fecha_nacimiento' date NOT NULL,\n   'carrera' VARCHAR)\n \n CREATE TABLE INSCRIPCION (\n-  'numero' INT PRIMARY KE\n+  'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT\n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988652833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,10 @@\n   'fecha_nacimiento' date NOT NULL,\n   'carrera' VARCHAR)\n \n CREATE TABLE INSCRIPCION (\n-  'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT\n+  'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT,\n+\n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988660094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   'carrera' VARCHAR)\n \n CREATE TABLE INSCRIPCION (\n   'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT,\n-\n+  'CURSO_codigo'\n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988665551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   'carrera' VARCHAR)\n \n CREATE TABLE INSCRIPCION (\n   'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT,\n-  'CURSO_codigo'\n+  'CURSO_codigo' INT NOT NULL\n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988672070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,10 @@\n   'carrera' VARCHAR)\n \n CREATE TABLE INSCRIPCION (\n   'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT,\n-  'CURSO_codigo' INT NOT NULL\n+  'CURSO_codigo' INT NOT NULL,\n+  ''\n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988682295,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,10 @@\n \n CREATE TABLE INSCRIPCION (\n   'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT,\n   'CURSO_codigo' INT NOT NULL,\n-  ''\n+  'ESTUDIANTE_legajo' INT NOT NULL,\n+  \n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988688196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n CREATE TABLE INSCRIPCION (\n   'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT,\n   'CURSO_codigo' INT NOT NULL,\n   'ESTUDIANTE_legajo' INT NOT NULL,\n-  \n+  'fecha_hora' \n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988693324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n CREATE TABLE INSCRIPCION (\n   'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT,\n   'CURSO_codigo' INT NOT NULL,\n   'ESTUDIANTE_legajo' INT NOT NULL,\n-  'fecha_hora' \n+  'fecha_hora' DATE NOT NULL\n )\n \n INSERT INTO PROFESOR VALUES (1, 'Juan', 'Pérez', '1990-06-06', 55000)\n , (2, 'Maria Emilia', 'Paz', '1984-07-15', 72000)\n"
+                },
+                {
+                    "date": 1641988717786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   'fecha_nacimiento' date NOT NULL,\n   'carrera' VARCHAR)\n \n CREATE TABLE INSCRIPCION (\n-  'numero' INT PRIMARY KEY NOT NULL AUTOINCREMENT,\n+  'numero' INT PRIMARY KEY NOT NULL,\n   'CURSO_codigo' INT NOT NULL,\n   'ESTUDIANTE_legajo' INT NOT NULL,\n   'fecha_hora' DATE NOT NULL\n )\n"
+                },
+                {
+                    "date": 1641988735038,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,9 @@\n (51200, 'Lourdes', 'Martinez', '2001-12-13', 'Sistemas')\n \n INSERT INTO INSCRIPCION\n VALUES \n-(1, 101, 41258, 2012-05-02 18:45:00),\n+(1, 101, 41258, '2012-05-02 18:45:00'),\n (2, 102, 41258, 2012-04-02 18:45:00),\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n"
+                },
+                {
+                    "date": 1641988746948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n \n INSERT INTO INSCRIPCION\n VALUES \n (1, 101, 41258, '2012-05-02 18:45:00'),\n-(2, 102, 41258, 2012-04-02 18:45:00),\n+(2, 102, 41258, '2012-04-02 18:45:00'),\n (3, 102, 47961, 2012-01-02 20:01:00),\n (4, 103, 47961, 2012-04-28 18:45:00),\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n"
+                },
+                {
+                    "date": 1641988753902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,10 +54,10 @@\n INSERT INTO INSCRIPCION\n VALUES \n (1, 101, 41258, '2012-05-02 18:45:00'),\n (2, 102, 41258, '2012-04-02 18:45:00'),\n-(3, 102, 47961, 2012-01-02 20:01:00),\n-(4, 103, 47961, 2012-04-28 18:45:00),\n+(3, 102, 47961, '2012-01-02 20:01:00'),\n+(4, 103, 47961, '2012-04-28 18:45:00'),\n (5, 101, 39685, 2012-04-12 18:45:00),\n (6, 103, 43651, 2012-04-28 18:45:00),\n (7, 103, 43651, 2012-04-28 18:45:00),\n (8, 101, 47961, 2012-04-28 18:45:00),\n"
+                },
+                {
+                    "date": 1641988759951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,9 +56,9 @@\n (1, 101, 41258, '2012-05-02 18:45:00'),\n (2, 102, 41258, '2012-04-02 18:45:00'),\n (3, 102, 47961, '2012-01-02 20:01:00'),\n (4, 103, 47961, '2012-04-28 18:45:00'),\n-(5, 101, 39685, 2012-04-12 18:45:00),\n-(6, 103, 43651, 2012-04-28 18:45:00),\n+(5, 101, 39685, '2012-04-12 18:45:00'),\n+(6, 103, 43651, '2012-04-28 18:45:00'),\n (7, 103, 43651, 2012-04-28 18:45:00),\n (8, 101, 47961, 2012-04-28 18:45:00),\n (11, 101, 43651, 2012-04-21 18:45:00)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1641988765481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -58,7 +58,7 @@\n (3, 102, 47961, '2012-01-02 20:01:00'),\n (4, 103, 47961, '2012-04-28 18:45:00'),\n (5, 101, 39685, '2012-04-12 18:45:00'),\n (6, 103, 43651, '2012-04-28 18:45:00'),\n-(7, 103, 43651, 2012-04-28 18:45:00),\n-(8, 101, 47961, 2012-04-28 18:45:00),\n+(7, 103, 43651, '2012-04-28 18:45:00'),\n+(8, 101, 47961, '2012-04-28 18:45:00'),\n (11, 101, 43651, 2012-04-21 18:45:00)\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1641829706587,
